@@ -15,10 +15,9 @@ form.addEventListener('submit', (e) => {
 function greeting() {
     xhr.addEventListener('load', () => {
         let answer = JSON.parse(xhr.responseText);        
-        if (answer.success) {          
-            welcome.classList.add('welcome_active');
+        if (answer.success) {    
             localStorage.setItem("userName", answer.user_id);
-            userName.innerText = localStorage.getItem("userName");
+            greetingAfterPageReload();            
         }
         else {
             alert('Неверные логин/пароль')
