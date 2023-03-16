@@ -6,8 +6,7 @@ textarea.addEventListener("input", () => {
 });
 
 window.addEventListener("load", () => {
-    const savedText = localStorage.getItem("savedText");
-    if (savedText) {
-        textarea.value = savedText;
-    }
+    const savedText = localStorage.getItem("savedText");    
+    textarea.value = savedText;
+    
 });
